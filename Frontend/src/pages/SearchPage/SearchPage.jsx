@@ -20,7 +20,7 @@ const SearchPage = () => {
         const token = localStorage.getItem("token");
         if (token) {
           const response = await axios.get(
-            "http://localhost:5000/api/v1/history",
+            "https://backendeserver.onrender.com/api/v1/history",
             {
               headers: { Authorization: `Bearer ${token}` },
               withCredentials: true,
@@ -54,7 +54,7 @@ const SearchPage = () => {
     navigate("/crawling");
     try {
       setLoading(true);
-      const resultText = await axios.post("http://localhost:3000/summarize", {
+      const resultText = await axios.post("https://escout.onrender.com/summarize", {
         query: searchQuery,
       });
 

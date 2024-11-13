@@ -27,7 +27,7 @@ const RegisterPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/register",
+        "https://backendeserver.onrender.com/api/v1/auth/register",
         formData
       );
       if (response.data.success) {

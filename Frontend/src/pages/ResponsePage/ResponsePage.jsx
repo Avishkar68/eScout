@@ -62,7 +62,7 @@ const ResponsePage = () => {
 
     try {
       const body = { query: searchQuery, response };
-      const res = await axios.post("http://localhost:5000/api/v1/history", body, {
+      const res = await axios.post("https://backendeserver.onrender.com/api/v1/history", body, {
         withCredentials: true,
       });
 
