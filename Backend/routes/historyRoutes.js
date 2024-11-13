@@ -4,9 +4,9 @@ import { protect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/', protect, addHistory);  // Add search history (requires authentication)
-router.get('/', protect, getHistory);  // Get search history (requires authentication)
-router.get('/:historyId', protect, getSingleHistory);
+router.post('/', addHistory);  // Add search history (requires authentication)
+router.get('/',  getHistory);  // Get search history (requires authentication)
+router.get('/:historyId',  getSingleHistory);
 
 
 export default router;
